@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 
 /// Created by HrAnT VitaNova
 /// Date: 22.04.22 at 13:47
+///
+///
+///
 
 class AnimatedAlignDemo extends StatefulWidget {
   const AnimatedAlignDemo({Key? key}) : super(key: key);
@@ -14,8 +17,6 @@ class _AnimatedAlignDemoState extends State<AnimatedAlignDemo> {
   static const _alignments = [
     Alignment.topCenter,
     Alignment.bottomCenter,
-    // Alignment.bottomLeft,
-    // Alignment.bottomRight,
   ];
 
   var _index = 0;
