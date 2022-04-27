@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_test_group_2/screens/animation_screens/animated_align_demo.dart';
 import 'package:flutter_test_group_2/screens/animation_screens/animation_container1.dart';
-import 'package:flutter_test_group_2/screens/animation_screens/animation_container2.dart';
+import 'package:flutter_test_group_2/screens/animation_screens/builder_animation_demo.dart';
 
-import 'animation_container3.dart';
 import 'animation_container4.dart';
 
 class AnimationManager extends StatefulWidget {
@@ -36,12 +36,12 @@ class _AnimationManagerState extends State<AnimationManager> {
             ],
           ),
         ),
-        body: const TabBarView(
+        body:  TabBarView(
           children: [
-            AnimationContainer1(),
-            AnimationContainer2(),
-            AnimationContainer3(),
-            AnimationContainer4(),
+            const AnimationContainer1(),
+            const AnimatedAlignDemo(),
+            const AnimationContainer4(),
+            BuilderAnimationDemo(),
           ],
         ),
         // bottomNavigationBar: BottomNavigationBar(

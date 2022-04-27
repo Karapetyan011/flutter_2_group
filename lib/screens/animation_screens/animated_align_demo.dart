@@ -1,0 +1,56 @@
+import 'package:flutter/material.dart';
+
+/// Created by HrAnT VitaNova
+/// Date: 22.04.22 at 13:47
+
+class AnimatedAlignDemo extends StatefulWidget {
+  const AnimatedAlignDemo({Key? key}) : super(key: key);
+
+  @override
+  _AnimatedAlignDemoState createState() => _AnimatedAlignDemoState();
+}
+
+class _AnimatedAlignDemoState extends State<AnimatedAlignDemo> {
+  static const _alignments = [
+    Alignment.topCenter,
+    Alignment.bottomCenter,
+    // Alignment.bottomLeft,
+    // Alignment.bottomRight,
+  ];
+
+  var _index = 0;
+
+  AlignmentGeometry get _alignment => _alignments[_index % _alignments.length];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            color: Colors.grey,
+            height: MediaQuery.of(context).size.height - 200,
+            child: GestureDetector(
+              onTap: () {
+                setState(() {
+                  _index++;
+                });
+              },
+              child: AnimatedAlign(
+                alignment: _alignment,
+                duration: const Duration(milliseconds: 2000),
+                curve: Curves.easeInOutBack,
+                child: Image.asset(
+                  'assets/images/penny.png',
+                  height: 200,
+                ),
+              ),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
