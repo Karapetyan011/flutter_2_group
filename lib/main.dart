@@ -1,9 +1,11 @@
+/// Created by HrAnT
+
 import 'package:flutter/material.dart';
-import 'package:flutter_test_group_2/my_custom_text.dart';
-import 'package:flutter_test_group_2/my_flutter_app_icons.dart';
+import 'package:flutter_test_group_2/widgets/my_custom_text.dart';
+import 'package:flutter_test_group_2/utils/my_flutter_app_icons.dart';
 import 'package:flutter_test_group_2/screens/animation_screens/animation_manager.dart';
 
-import 'my_custom_input.dart';
+import 'widgets/my_custom_input.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -107,7 +109,7 @@ class MyCustomApp extends StatelessWidget {
                       ),
                     ),
                     const Icon(
-                      MyFlutterApp.facebook_squared,
+                      MyFlutterApp.facebook,
                       size: 44.0,
                     ),
                     // GestureDetector(
