@@ -1,9 +1,11 @@
+/// Created by HrAnT
+
 import 'package:flutter/material.dart';
 import 'package:flutter_test_group_2/screens/animation_screens/animated_align_demo.dart';
-import 'package:flutter_test_group_2/screens/animation_screens/animation_container1.dart';
-import 'package:flutter_test_group_2/screens/animation_screens/builder_animation_demo.dart';
+import 'package:flutter_test_group_2/screens/animation_screens/animation_container_demo.dart';
+import 'package:flutter_test_group_2/screens/animation_screens/animated_builder_demo.dart';
+import 'package:flutter_test_group_2/screens/web_view_screen/demo_for_web_view_screen.dart';
 
-import 'animation_container4.dart';
 
 class AnimationManager extends StatefulWidget {
   const AnimationManager({Key? key}) : super(key: key);
@@ -30,36 +32,23 @@ class _AnimationManagerState extends State<AnimationManager> {
             labelColor: Colors.purple,
             tabs: [
               Tab(text: 'Animation Container'),
-              Tab(text: '2'),
+              Tab(text: 'Animated Align'),
               Tab(text: '3'),
-              Tab(text: '4'),
+              Tab(text: 'animated Builder'),
             ],
           ),
         ),
-        body:  TabBarView(
+        body: const TabBarView(
           children: [
-            const AnimationContainer1(),
-            const AnimatedAlignDemo(),
-            const AnimationContainer4(),
-            BuilderAnimationDemo(),
+            AnimationContainerDemo(),
+            AnimatedAlignDemo(),
+            DemoForWebViewScreen(
+              mUrl:
+                  'https://flutter.dev/?gclid=CjwKCAjw9qiTBhBbEiwAp-GE0WKd9gg79IvhUuBSFFiVFTk4iT_okqNqwk9x4iuRJelh2rLC-y_YWhoCwlYQAvD_BwE&gclsrc=aw.ds',
+            ),
+            AnimatedBuilderDemo(),
           ],
         ),
-        // bottomNavigationBar: BottomNavigationBar(
-        //   items: const [
-        //     BottomNavigationBarItem(
-        //       icon: Icon(Icons.face),
-        //     ),
-        //     BottomNavigationBarItem(
-        //       icon: Icon(Icons.favorite),
-        //     ),
-        //     BottomNavigationBarItem(
-        //       icon: Icon(Icons.radio),
-        //     ),
-        //     BottomNavigationBarItem(
-        //       icon: Icon(Icons.unarchive_sharp),
-        //     ),
-        //   ],
-        // ),
       ),
     );
   }

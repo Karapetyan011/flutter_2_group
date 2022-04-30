@@ -1,10 +1,6 @@
-import 'package:flutter/material.dart';
-
 /// Created by HrAnT VitaNova
-/// Date: 22.04.22 at 13:47
-///
-///
-///
+
+import 'package:flutter/material.dart';
 
 class AnimatedAlignDemo extends StatefulWidget {
   const AnimatedAlignDemo({Key? key}) : super(key: key);

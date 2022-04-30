@@ -14,7 +14,9 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
-  
+  webview_flutter: ^3.0.2
+  shared_preferences: ^2.0.13
+
 
 flutter_icons:
   android: true
@@ -32,9 +34,9 @@ flutter:
 
 
   assets:
-     - assets/images/
+    - assets/images/
 
   fonts:
-     - family:  MyFlutterApp
-       fonts:
-         - asset: assets/fonts/MyFlutterApp.ttf
+    - family: MyFlutterApp
+      fonts:
+        - asset: assets/fonts/MyFlutterApp.ttf
