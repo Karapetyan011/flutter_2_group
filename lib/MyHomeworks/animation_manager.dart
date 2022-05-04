@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../screens/animation_screens/animation_container1.dart';
-import '../screens/animation_screens/animation_container4.dart';
 import 'AnimationAlignDemo.dart';
+import 'animation_container1.dart';
 import 'animation_container3.dart';
+import 'animation_container4.dart';
 
 class AnimationManager extends StatefulWidget {
   const AnimationManager({Key? key}) : super(key: key);
