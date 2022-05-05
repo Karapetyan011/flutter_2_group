@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test_group_2/screens/dice_game_screen/dice_page.dart';
 import 'package:flutter_test_group_2/screens/list_view_screen/list_view_page.dart';
+import 'package:flutter_test_group_2/screens/piano_screen/pinao_page.dart';
 import 'package:flutter_test_group_2/widgets/my_custom_text.dart';
 import 'package:flutter_test_group_2/utils/my_flutter_app_icons.dart';
 import 'package:flutter_test_group_2/screens/animation_screens/animation_manager.dart';
@@ -27,7 +28,8 @@ class MyApp extends StatelessWidget {
       // home: MyCustomApp(),
       // home: AnimationManager(),
       // home: DicePage(),
-      home: ListViewPage(),
+      // home: ListViewPage(),
+      home: PianoApp(),
     );
   }
 }

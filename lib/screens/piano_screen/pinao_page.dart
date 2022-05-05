@@ -6,7 +6,7 @@ class PianoApp extends StatelessWidget {
 
   void playSound(int soundNumber) {
     final player = AudioCache();
-    player.play('note$soundNumber.wav');
+    player.play('audio/note$soundNumber.wav');
   }
 
   Expanded buildKey({required Color color, required int soundNumber}) {
