@@ -28,8 +28,8 @@ class MyApp extends StatelessWidget {
       // home: MyCustomApp(),
       // home: AnimationManager(),
       // home: DicePage(),
-      // home: ListViewPage(),
-      home: PianoApp(),
+      home: ListViewPage(),
+      // home: PianoApp(),
     );
   }
 }
