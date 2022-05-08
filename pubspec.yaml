@@ -14,9 +14,26 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
+
+  # A Flutter plugin that provides a WebView widget.
+  # On iOS the WebView widget is backed by a WKWebView; On Android the WebView widget is backed by a WebView.
+  #                Android	  iOS
+  #Support	  SDK   20+	      9.0+
   webview_flutter: ^3.0.2
+
+  # Обертывает постоянное хранилище для конкретных платформ для простых данных
+  # (NSUserDefaults в iOS и macOS, SharedPreferences в Android и т. д.).
+  # Данные могут сохраняться на диск асинхронно, и нет гарантии, что записи будут сохраняться на диске после возврата,
+  # поэтому этот подключаемый модуль не следует использовать для хранения важных данных.
+  # Поддерживаемые типы данных: int, double, bool, String и List<String>.
   shared_preferences: ^2.0.13
+
+  # Плагин Flutter для одновременного воспроизведения нескольких аудиофайлов, работает на Android, iOS, macOS и в Интернете.
   audioplayers: ^0.20.1
+
+  # Этот пакет содержит набор высокоуровневых функций и классов, упрощающих использование ресурсов HTTP.
+  # Он мультиплатформенный и поддерживает мобильные устройства, настольные компьютеры и браузеры.
+  http: ^0.13.4
 
 
 flutter_icons:

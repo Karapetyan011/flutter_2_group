@@ -1,12 +1,8 @@
 /// Created by HrAnT
-
 import 'package:flutter/material.dart';
-import 'package:flutter_test_group_2/screens/dice_game_screen/dice_page.dart';
-import 'package:flutter_test_group_2/screens/list_view_screen/list_view_page.dart';
-import 'package:flutter_test_group_2/screens/piano_screen/pinao_page.dart';
-import 'package:flutter_test_group_2/widgets/my_custom_text.dart';
+import 'package:flutter_test_group_2/screens/star_wars/star_wars_page.dart';
 import 'package:flutter_test_group_2/utils/my_flutter_app_icons.dart';
-import 'package:flutter_test_group_2/screens/animation_screens/animation_manager.dart';
+import 'package:flutter_test_group_2/widgets/my_custom_text.dart';
 
 import 'widgets/my_custom_input.dart';
 
@@ -28,8 +24,9 @@ class MyApp extends StatelessWidget {
       // home: MyCustomApp(),
       // home: AnimationManager(),
       // home: DicePage(),
-      home: ListViewPage(),
+      // home: ListViewPage(),
       // home: PianoApp(),
+      home: SWPage(),
     );
   }
 }
@@ -118,6 +115,44 @@ class MyCustomApp extends StatelessWidget {
                       MyFlutterApp.facebook,
                       size: 44.0,
                     ),
+                    TextButton(
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                          Colors.blueAccent,
+                        ),
+                      ),
+                      onPressed: () => showDialog<String>(
+                        context: context,
+                        builder: (BuildContext context) => AlertDialog(
+                          title: const Text(
+                            'Alert Dialog',
+                          ),
+                          actionsAlignment: MainAxisAlignment.spaceAround,
+                          content: const Text(
+                            'Content Message',
+                          ),
+                          actions: <Widget>[
+                            TextButton(
+                              onPressed: () {print('hello world');},
+                              child: const Text(
+                                'Ok',
+                              ),
+                            ),
+                            TextButton(
+                              onPressed: () {},
+                              child: const Text(
+                                "Cancel",
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      child: const Text(
+                        'Show Alert Dialog',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ),
+
                     // GestureDetector(
                     //   onTap: () {
                     //     print('On Tap');
