@@ -5,6 +5,7 @@ import 'package:flutter_test_group_2/widgets/my_custom_text.dart';
 import 'package:flutter_test_group_2/utils/my_flutter_app_icons.dart';
 import 'package:flutter_test_group_2/screens/animation_screens/animation_manager.dart';
 
+import 'Zapros.dart';
 import 'widgets/my_custom_input.dart';
 
 void main() {
@@ -23,7 +24,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       // home: MyCustomApp(),
-      home: AnimationManager(),
+      // home: AnimationManager(),
+      home: SWPage(),
     );
   }
 }
