@@ -44,7 +44,7 @@ class _AnimationManagerState extends State<AnimationManager> {
             AnimatedAlignDemo(),
             DemoForWebViewScreen(
               mUrl:
-                  'https://flutter.dev/?gclid=CjwKCAjw9qiTBhBbEiwAp-GE0WKd9gg79IvhUuBSFFiVFTk4iT_okqNqwk9x4iuRJelh2rLC-y_YWhoCwlYQAvD_BwE&gclsrc=aw.ds',
+              'https://www.google.ru',
             ),
             AnimatedBuilderDemo(),
           ],

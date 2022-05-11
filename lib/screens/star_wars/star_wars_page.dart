@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../core/model/people.dart';
+import '../../core/model/planets.dart';
 import '../../core/services/swservice.dart';
 
 class SWPage extends StatelessWidget {
@@ -25,7 +25,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  People? _userInfo;
+  Planets? _userInfo;
   int _count = 0;
   dynamic _results;
   dynamic _previous;
