@@ -25,7 +25,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Planets? _planetsInfo;
   int _count = 8;
   dynamic _results;
-  dynamic _previous;
   dynamic _next;
 
   @override
