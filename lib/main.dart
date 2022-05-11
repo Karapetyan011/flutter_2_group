@@ -1,8 +1,8 @@
 /// Created by HrAnT
 import 'package:flutter/material.dart';
-import 'package:flutter_test_group_2/screens/star_wars/star_wars_page.dart';
+import 'package:flutter_test_group_2/screens/stream_builder/stream_builder.dart';
+import 'package:flutter_test_group_2/screens/stream_builder/stream_builder_real_time_clock.dart';
 import 'package:flutter_test_group_2/utils/my_flutter_app_icons.dart';
-import 'package:flutter_test_group_2/widgets/my_custom_text.dart';
 
 import 'widgets/my_custom_input.dart';
 
@@ -26,7 +26,9 @@ class MyApp extends StatelessWidget {
       // home: DicePage(),
       // home: ListViewPage(),
       // home: PianoApp(),
-      home: SWPage(),
+      // home: SWPage(),
+      // home:FlutterStreamBuilder()
+      home: StreamBuilderRealTimeClock(),
     );
   }
 }
@@ -58,18 +60,27 @@ class MyCustomApp extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    const MyCustomText(
-                      mText: 'Login',
-                      mColor: Colors.pink,
-                      mFontSize: 32.0,
-                      mFontWeight: FontWeight.bold,
+                    Container(
+                      height: 400,
+                      width: 40,
+                      color: Colors.yellow,
+                      child: Image.network(
+                        'https://cdn.pixabay.com/photo/2020/06/01/22/23/eye-5248678_960_720.jpg',
+                        fit: BoxFit.contain,
+                      ),
                     ),
-                    const MyCustomText(
-                      mText: 'Password',
-                      mColor: Colors.blue,
-                      mFontSize: 56.0,
-                      mFontWeight: FontWeight.w100,
-                    ),
+                    // const MyCustomText(
+                    //   mText: 'Login',
+                    //   mColor: Colors.pink,
+                    //   mFontSize: 32.0,
+                    //   mFontWeight: FontWeight.bold,
+                    // ),
+                    // const MyCustomText(
+                    //   mText: 'Password',
+                    //   mColor: Colors.blue,
+                    //   mFontSize: 56.0,
+                    //   mFontWeight: FontWeight.w100,
+                    // ),
 
                     MyCustomInput(
                       mTextInputType: TextInputType.text,
@@ -133,7 +144,9 @@ class MyCustomApp extends StatelessWidget {
                           ),
                           actions: <Widget>[
                             TextButton(
-                              onPressed: () {print('hello world');},
+                              onPressed: () {
+                                print('hello world');
+                              },
                               child: const Text(
                                 'Ok',
                               ),
