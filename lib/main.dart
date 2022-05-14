@@ -1,7 +1,10 @@
 /// Created by HrAnT
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_test_group_2/screens/stream_builder/stream_builder.dart';
-import 'package:flutter_test_group_2/screens/stream_builder/stream_builder_real_time_clock.dart';
+import 'package:flutter_test_group_2/screens/grid_view_screen/grid_view_builder.dart';
+import 'package:flutter_test_group_2/screens/grid_view_screen/grid_view_count/grid_view_count.dart';
+import 'package:flutter_test_group_2/screens/grid_view_screen/grid_view_extent.dart';
+import 'package:flutter_test_group_2/screens/stack_screen/stack_page.dart';
 import 'package:flutter_test_group_2/utils/my_flutter_app_icons.dart';
 
 import 'widgets/my_custom_input.dart';
@@ -28,7 +31,11 @@ class MyApp extends StatelessWidget {
       // home: PianoApp(),
       // home: SWPage(),
       // home:FlutterStreamBuilder()
-      home: StreamBuilderRealTimeClock(),
+      //home: StreamBuilderRealTimeClock(),
+      // home: GridViewCount(),
+       home:StackPage(),
+      // home: GridViewBuilder(),
+      // home: GridViewExtent(),
     );
   }
 }
@@ -145,7 +152,9 @@ class MyCustomApp extends StatelessWidget {
                           actions: <Widget>[
                             TextButton(
                               onPressed: () {
-                                print('hello world');
+                                if (kDebugMode) {
+                                  print('hello world');
+                                }
                               },
                               child: const Text(
                                 'Ok',
