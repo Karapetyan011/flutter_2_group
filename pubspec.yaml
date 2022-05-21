@@ -17,6 +17,8 @@ dependencies:
   webview_flutter: ^3.0.2
   shared_preferences: ^2.0.13
   provider: ^6.0.2
+  audioplayers: ^0.20.1
+
 
 
 flutter_icons:
@@ -36,6 +38,7 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/sounds/
 
   fonts:
     - family: MyFlutterApp

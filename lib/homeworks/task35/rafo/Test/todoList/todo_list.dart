@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:home/rafo/Test/todoList/mywidgets.dart';
+import 'package:flutter_test_group_2/homeworks/task35/rafo/Test/todoList/mywidgets.dart';
 
 void main() {
   runApp(MaterialApp(
     theme: ThemeData.dark(),
-    initialRoute: '/',
-    routes: {'/': (context) => MainScreen(), '/todo': (context) => MyApp()},
+    home: MainScreen(),
+    // initialRoute: '/',
+    // routes: {'/': (context) => MainScreen(), '/todo': (context) => MyApp()},
   ));
 }
 
@@ -60,18 +61,20 @@ class _MainScreenState extends State<MainScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ElevatedButton(
-
                   onPressed: () {
                     setState(() {});
-                    Navigator.pushNamed(context, '/todo');
+                    // Navigator.pushNamed(context, '/todo');
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return MyApp();
+                    }));
                   },
-                  child: Container(
+                  child: SizedBox(
                     height: MediaQuery.of(context).size.height / 20.0,
                     width: MediaQuery.of(context).size.width / 5.0,
                     child: const Center(
                       child: Text(
                         "Start",
-
                         style: TextStyle(
                           fontSize: 20,
                         ),
