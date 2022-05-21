@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
       // home:FlutterStreamBuilder()
       //home: StreamBuilderRealTimeClock(),
       // home: GridViewCount(),
-       home:StackPage(),
+      home: StackPage(),
       // home: GridViewBuilder(),
       // home: GridViewExtent(),
     );
@@ -67,6 +67,10 @@ class MyCustomApp extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
+                    ElevatedButton(
+                      onPressed: () {},
+                      child: const Text('press me'),
+                    ),
                     Container(
                       height: 400,
                       width: 40,
