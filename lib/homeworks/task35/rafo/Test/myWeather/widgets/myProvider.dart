@@ -1,5 +1,4 @@
-import 'dart:convert';
-import 'dart:io';
+
 
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
@@ -31,12 +30,9 @@ class MyProvider with ChangeNotifier {
       throw Exception(e.toString());
 
     });
-
-
     print(response.statusCode);
     weatherResponse = WeatherDTO.fromJson(response.data);
     // await Future.delayed(Duration(seconds: 5));
-    print("\n");
 
     // sleep(Duration(seconds: 15 ));
 
@@ -68,6 +64,16 @@ class MyProvider with ChangeNotifier {
     }
     return weatherResponse?.main?["temp"] - 273.15;
   }
+
+  String? get weatherType{
+    if (weatherResponse?.weather?[0]["main"] == null) {
+      return "";
+    }
+
+    return weatherResponse?.weather?[0]["main"];
+  }
+
+
 }
 
 // /// Determine the current position of the device.

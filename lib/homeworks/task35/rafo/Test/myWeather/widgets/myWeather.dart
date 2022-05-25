@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_test_group_2/homeworks/task35/rafo/Test/myWeather/consts/consts.dart';
 import 'package:flutter_test_group_2/homeworks/task35/rafo/Test/myWeather/widgets/myProvider.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:provider/provider.dart';
@@ -9,21 +8,10 @@ class MyWeather extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: SafeArea(
         child: Scaffold(
           resizeToAvoidBottomInset: false,
-          appBar: AppBar(
-            title: Text("Weather APP"),
-            centerTitle: true,
-            backgroundColor: greenColor,
-            flexibleSpace: FlexibleSpaceBar(),
-            elevation: 24.0,
-            titleTextStyle: const TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-            ),
-          ),
           body: MyCostumWeatherPage(),
         ),
       ),
@@ -36,7 +24,6 @@ class MyCostumWeatherPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var animCtrl = AnimationController;
     var textCtr = TextEditingController();
     return Consumer<MyProvider>(
         builder: (context, provider, _) => Container(
@@ -71,8 +58,8 @@ class MyCostumWeatherPage extends StatelessWidget {
                               print(s);
                             }
                           },
-                          child: Container(
-                            height: 100,
+                          child: const SizedBox(
+                            height: 50,
                             width: 100,
                           ),
                         ),
@@ -85,11 +72,10 @@ class MyCostumWeatherPage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Text(provider.weatherResponse?.name ?? "",
-                          style: const TextStyle(
-                            color: Colors.red,
-                            fontSize: 30
-                          ),
+                        Text(
+                          provider.weatherResponse?.name ?? "",
+                          style:
+                              const TextStyle(color: Colors.red, fontSize: 30),
                         ),
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -105,10 +91,33 @@ class MyCostumWeatherPage extends StatelessWidget {
                                     ),
                                   ),
                                   Text(
-                                    "${provider.temperature?.round()}" ?? " ",
-                                    style: TextStyle(
+                                    "${provider.temperature?.round()}",
+                                    style: const TextStyle(
                                       fontSize: 40,
                                       color: Colors.red,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(top: 16.0, left: 54.0),
+                              child: Column(
+                                children: [
+                                  const Text(
+                                    "Weather",
+                                    style: TextStyle(
+                                      fontSize: 45,
+                                    ),
+                                  ),
+                                  Text(
+                                    provider.weatherType!,
+                                    style: const TextStyle(
+                                      fontSize: 40,
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.bold,
                                     ),
                                   ),
                                 ],
@@ -127,8 +136,8 @@ class MyCostumWeatherPage extends StatelessWidget {
                           child: Center(
                             child: AnimatedContainer(
                               duration: Duration(seconds: 5),
-                              child: LoadingAnimationWidget.stretchedDots(
-                                  color: Colors.white, size: 34.0),
+                              child: LoadingAnimationWidget.fourRotatingDots(
+                                  color: Colors.white, size: 48.0),
                             ),
                           ),
                         ),
